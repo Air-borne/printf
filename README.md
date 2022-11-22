@@ -1,2 +1,2 @@
 # printf
-ALX group of two project on the printf function in C
+<h1>ALX group of two project on the printf function in C;
