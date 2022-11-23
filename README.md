@@ -2,7 +2,7 @@
 
 *This PROJECT accommodates only two students to work on the printf function task in C;*
 
-###### Emphasis on the project directories
+#### Emphasis on the project directories
 ```- _putchar.c : Self customized function that display a single item to stdout and stderr
 - calc_strlen_&_print.c : 
 - handler.c : contains the function for the handler
