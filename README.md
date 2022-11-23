@@ -14,4 +14,4 @@
 - string.c
 ```
                            I do Hard-Things
-![alt text](https://www.shutterstock.com/image-photo/software-development-using-notes-600w-529478677.jpg "Doing Hard things!")
+![alt text](https://www.shutterstock.com/image-vector/programmer-code-cat-on-book-600w-1459591481.jpg "Doing Hard things!")
