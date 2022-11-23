@@ -13,5 +13,5 @@
 - intiger.c   
 - string.c
 ```
-I do Hard-Things
-![alt text](https://www.shutterstock.com/image-vector/programmer-creates-new-project-vector-600w-1732352233.jpg "Doing Hard things!")
+                           I do Hard-Things
+![alt text](blob:https://web.whatsapp.com/6f7f0800-9b9b-490a-ac31-9032c1a35098 "Doing Hard things!")
