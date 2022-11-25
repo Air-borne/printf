@@ -49,6 +49,7 @@
 modules.order
 Module.symvers
 Mkfile.old
+main.c
 dkms.conf
 main.c
 main.c

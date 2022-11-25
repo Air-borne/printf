@@ -1,50 +1,55 @@
-#include "main.h" 
+#include "main.h"
 
 /**
-*handler - controlls the format passed into the _print function
-*@str: string format
-*@list: contains List of arguments passed
-* Return: total size of arguments with the total size of base string
-*/
-
-int handler(const char *str, va_list);
+* handler - Format controller
+* @str: String format
+* @list: List of arguments
+*
+* Return: Total size of arguments with the total size of the base string
+**/
+int handler(const char *str, va_list list)
 {
-	int i, size, v;
+	int size, i, aux;
 
 	size = 0;
 	for (i = 0; str[i] != 0; i++)
 	{
 		if (str[i] == '%')
 		{
-			v = percent_handler(str, list, &i);
-			if (v == -1)
+			aux = percent_handler(str, list, &i);
+			if (aux == -1)
 				return (-1);
 
-			size += v;
+			size += aux;
 			continue;
 		}
 
 		_putchar(str[i]);
-		size = size + 1;	
+		size = size + 1;
 	}
+
 
 	return (size);
 }
 
 /**
-* percent_handler - controlls the format passed into the _print function
-* @str: string format
-* @list: contains List of arguments passed
-* @i: pointer to the position of a particular char among a string in memory
-* Return: total size of arguments with the total size of base string
+* percent_handler - Controlls percent format
+* @str: String format
+* @list: List of arguments
+* @i: Iterator
+*
+* Return: Size of the numbers of elements printed
 */
-
 int percent_handler(const char *str, va_list list, int *i)
 {
-	int size, k, num_formats;
+	int size, j, number_formats;
 	format formats[] = {
 		{'s', print_string}, {'c', print_char},
 		{'d', print_integer}, {'i', print_integer},
+		{'b', print_binary}, {'u', print_unsigned},
+		{'o', print_octal}, {'x', print_hexadecimal_low},
+		{'X', print_hexadecimal_upp}, {'p', print_pointer},
+		{'r', print_rev_string}, {'R', print_rot}
 	};
 
 	*i = *i + 1;
@@ -57,46 +62,19 @@ int percent_handler(const char *str, va_list list, int *i)
 		_putchar('%');
 		return (1);
 	}
-	
-	num_formats = sizeof(formats) / sizeof(formats[0]);
-	for (size = k = 0; j < num_formats; k++)
+
+	number_formats = sizeof(formats) / sizeof(formats[0]);
+	for (size = j = 0; j < number_formats; j++)
 	{
-		if (str[*i] == formats[k].type)
+		if (str[*i] == formats[j].type)
 		{
-			size = formats[k].f(list);
+			size = formats[j].f(list);
 			return (size);
-		} 
+		}
+
 	}
-	
-	_putchar('%'), _putchar(str[*i])
-	
+
+	_putchar('%'), _putchar(str[*i]);
+
 	return (2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

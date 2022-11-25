@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * print_char - print char.
 * @list: va_list.
@@ -8,11 +7,12 @@
 */
 int print_char(va_list list)
 {
-	int cont;
+	int aux;
 
-	cont = va_arg(list, int);
+	aux = va_arg(list, int);
 
-	_putchar(cont);
+	_putchar(aux);
 
 	return (1);
 }
+

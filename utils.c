@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
 * _strlen - Calculate the length of a string
 * @str: String
@@ -17,11 +18,11 @@ int _strlen(const char *str)
 }
 
 /**
-* print - prints char.
+* print - print char.
 * @str: string.
 *
 * Return: string length.
-**/
+*/
 
 int print(char *str)
 {
@@ -32,3 +33,4 @@ int print(char *str)
 
 	return (i);
 }
+
